@@ -57,6 +57,7 @@ main > nav img {
 
 section#landing {
   margin-top: 10vh;
+  height: 100vh;
 }
 
 section#landing .swish {
@@ -147,6 +148,7 @@ section#landing .swish .content div {
 
   section#landing {
     margin-top: 23vh;
+    height: unset;
   }
 
   section#landing .swish .content {
@@ -163,6 +165,7 @@ section#landing .swish .content div {
 section#teams h1 {
   color: #ffffff;
   text-align: center;
+  margin-top: 64px;
 }
 
 section#teams .teamgroup {
