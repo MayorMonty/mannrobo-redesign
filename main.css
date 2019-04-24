@@ -4,6 +4,7 @@
   --white: #ffffff;
 
   --blue: #8299e6;
+  --blue-channels: 130, 153, 230;
 }
 
 html,
@@ -57,7 +58,7 @@ main > nav img {
 
 section#landing {
   margin-top: 10vh;
-  height: 100vh;
+  height: 120vh;
 }
 
 section#landing .swish {
@@ -97,15 +98,14 @@ section#landing .swish .content {
 section#landing .swish .content aside.images {
   background: #ffffff;
   height: 260px;
-  width: 480px;
+  max-width: 480px;
+  width: 95%;
 
   margin: auto;
-  margin-top: 84px;
+  margin-top: 5.4rem;
 
   border-radius: 8px;
   box-shadow: 2px 2px rgba(var(--grey-1), 0.4);
-  /* background-image: url(https://mannrobo.org/assets/images/organization.jpg);
-  background-size: cover; */
 }
 
 section#landing .swish .content aside.images iframe {
@@ -162,12 +162,20 @@ section#landing .swish .content div {
   }
 }
 
-section#teams h1:first-child {
+section#teams {
+  z-index: 2;
+  position: relative;
+}
+
+section#teams h1 {
   color: #ffffff;
   text-align: center;
-  margin: 64px;
 
-  font-size: 2.4rem;
+  font-size: 1.8rem;
+}
+
+section #teams h1.title {
+  margin-bottom: 4rem;
 }
 
 section#teams .teamgroup {
@@ -180,13 +188,13 @@ section#teams .teamgroup {
 }
 
 section#teams .teamgroup .team {
-  background: #e0e0e0;
   height: 240px;
   min-width: 240px;
-  max-width: 360px;
+
   width: 95%;
 
   margin: 16px;
+  margin-bottom: 0;
   border-radius: 8px;
   background-size: cover;
 
@@ -194,49 +202,52 @@ section#teams .teamgroup .team {
   align-items: center;
   justify-content: center;
 
-  background-color: rgba(130, 153, 230, 0.6);
-
   position: relative;
   cursor: pointer;
   transition: var(--transition);
 }
 
-section#teams .teamgroup .team::after {
-  background-size: 200%;
-  background-position: center;
-  background-position-y: 30%;
+section#teams .teamgroup .team a {
+  text-decoration: none;
+  z-index: 1;
+}
+
+section#teams .teamgroup .team .img-tint {
+  background-color: rgba(var(--blue-channels), 0.6);
+  border-radius: 6px;
 
   position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 0;
   left: 0;
-  background-size: cover;
-
-  z-index: -1;
-
-  content: "";
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 
-section#teams .teamgroup .team.a::after {
-  background-image: url(https://mannrobo.org/assets/images/teams/3796A.jpg);
+section#teams .teamgroup .team:hover .img-tint {
+  background-color: rgba(var(--blue-channels), 1);
 }
 
-section#teams .teamgroup .team.b::after {
-  background-image: url(https://mannrobo.org/assets/images/teams/3796B.jpg);
+section#teams .teamgroup .team img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-section#teams .teamgroup .team.c::after {
-  background-image: url(https://mannrobo.org/assets/images/teams/3796C.jpg);
-}
+@media (min-width: 960px) {
+  section#teams .teamgroup .team {
+    max-width: 360px;
+  }
 
-section#teams .teamgroup .team.d::after {
-  background-image: url(https://mannrobo.org/assets/images/teams/3796A.jpg);
-}
+  section#teams h1.title {
+    z-index: 2;
+  }
 
-section#teams .teamgroup .team.e::after {
-  background-image: url(https://mannrobo.org/assets/images/teams/3796D.jpg);
-}
-
-section#teams .teamgroup .team.f::after {
-  background-image: url(https://mannrobo.org/assets/images/teams/3796B.jpg);
+  section#teams .teamgroup .team {
+    margin-bottom: 16px;
+  }
 }
