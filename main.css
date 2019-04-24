@@ -100,7 +100,7 @@ section#landing .swish .content aside.images {
   width: 480px;
 
   margin: auto;
-  margin-top: 32px;
+  margin-top: 84px;
 
   border-radius: 8px;
   box-shadow: 2px 2px rgba(var(--grey-1), 0.4);
@@ -162,10 +162,12 @@ section#landing .swish .content div {
   }
 }
 
-section#teams h1 {
+section#teams h1:first-child {
   color: #ffffff;
   text-align: center;
-  margin-top: 64px;
+  margin: 64px;
+
+  font-size: 2.4rem;
 }
 
 section#teams .teamgroup {
@@ -173,6 +175,8 @@ section#teams .teamgroup {
 
   flex-wrap: wrap;
   justify-content: center;
+
+  z-index: 3;
 }
 
 section#teams .teamgroup .team {
@@ -181,10 +185,58 @@ section#teams .teamgroup .team {
   min-width: 240px;
   max-width: 360px;
   width: 95%;
-  z-index: 3;
 
   margin: 16px;
   border-radius: 8px;
   background-size: cover;
-  background-color: #e0e0e0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(130, 153, 230, 0.6);
+
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+section#teams .teamgroup .team::after {
+  background-size: 200%;
+  background-position: center;
+  background-position-y: 30%;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-size: cover;
+
+  z-index: -1;
+
+  content: "";
+}
+
+section#teams .teamgroup .team.a::after {
+  background-image: url(https://mannrobo.org/assets/images/teams/3796A.jpg);
+}
+
+section#teams .teamgroup .team.b::after {
+  background-image: url(https://mannrobo.org/assets/images/teams/3796B.jpg);
+}
+
+section#teams .teamgroup .team.c::after {
+  background-image: url(https://mannrobo.org/assets/images/teams/3796C.jpg);
+}
+
+section#teams .teamgroup .team.d::after {
+  background-image: url(https://mannrobo.org/assets/images/teams/3796A.jpg);
+}
+
+section#teams .teamgroup .team.e::after {
+  background-image: url(https://mannrobo.org/assets/images/teams/3796D.jpg);
+}
+
+section#teams .teamgroup .team.f::after {
+  background-image: url(https://mannrobo.org/assets/images/teams/3796B.jpg);
 }
