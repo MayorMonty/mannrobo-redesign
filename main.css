@@ -1,0 +1,187 @@
+:root {
+  --grey-1: #333333;
+  --grey-2: #4f4f4f;
+  --white: #ffffff;
+
+  --blue: #8299e6;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+
+  font-family: "Montserrat", sans-serif;
+
+  background-color: var(--grey-1);
+  color: var(--white);
+
+  overflow-x: hidden;
+
+  font-size: 18px;
+}
+
+/**
+ * HEADER
+ */
+
+main > nav {
+  top: 0vw;
+  left: 0vw;
+
+  background-color: var(--grey-1);
+  z-index: 99;
+}
+
+/* main > nav::after {
+  content: "";
+  height: 5vh;
+  width: 100%;
+  background: var(--grey-1);
+  position: absolute;
+  bottom: -1vh;
+  left: -1vw;
+
+  transform: rotate(-2deg);
+} */
+
+main > nav img {
+  height: 8vh;
+  z-index: 1;
+  margin: 32px;
+}
+
+/**
+ * LANDING PAGE
+ */
+
+section#landing {
+  margin-top: 10vh;
+}
+
+section#landing .swish {
+  position: relative;
+  height: 60vh;
+}
+
+section#landing .swish .swish-blue,
+section#landing .swish .swish-grey {
+  position: absolute;
+  top: 0;
+  left: -20vw;
+  right: -20vw;
+  height: 60vh;
+}
+
+section#landing .swish .swish-blue {
+  background: var(--blue);
+  transform: rotate(15deg) translateY(25vh);
+}
+
+section#landing .swish .swish-grey {
+  background: var(--grey-2);
+  transform: rotate(-15deg) translateY(25vh);
+}
+
+section#landing .swish .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+section#landing .swish .content aside.images {
+  background: #ffffff;
+  height: 260px;
+  width: 480px;
+
+  margin: auto;
+  margin-top: 32px;
+
+  border-radius: 8px;
+  box-shadow: 2px 2px rgba(var(--grey-1), 0.4);
+  /* background-image: url(https://mannrobo.org/assets/images/organization.jpg);
+  background-size: cover; */
+}
+
+section#landing .swish .content aside.images iframe {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+}
+
+section#landing .swish .content h4 {
+  margin: 0;
+  margin-top: 4rem;
+}
+
+section#landing .swish .content nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+section#landing .swish .content a {
+  color: var(--grey-1);
+  text-decoration: none;
+  text-align: right;
+  margin-right: 16px;
+}
+
+section#landing .swish .content a:hover {
+  color: var(--white);
+}
+
+section#landing .swish .content div {
+  margin-left: 32px;
+  max-width: 560px;
+}
+
+@media (min-width: 960px) {
+  section#landing .swish .content h4 {
+    font-size: 1.3rem;
+    margin-top: 0;
+  }
+
+  section#landing {
+    margin-top: 23vh;
+  }
+
+  section#landing .swish .content {
+    flex-direction: row;
+  }
+
+  section#landing .swish .content aside.images {
+    margin-top: -80px;
+    margin-left: auto;
+    margin-right: 48px;
+  }
+}
+
+section#teams h1 {
+  color: #ffffff;
+  text-align: center;
+}
+
+section#teams .teamgroup {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section#teams .teamgroup .team {
+  background: #e0e0e0;
+  height: 240px;
+  min-width: 240px;
+  max-width: 360px;
+  width: 95%;
+  z-index: 3;
+
+  margin: 16px;
+  border-radius: 8px;
+  background-size: cover;
+  background-color: #e0e0e0;
+}
